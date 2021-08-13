@@ -803,6 +803,7 @@ for (let i = 0; i < popupVariantsItem.length; i++) {
   });
 }
 
+
 let productDelivery = document.querySelector(".product-item__delivery");
 if (productDelivery != null) {
   productDelivery.addEventListener("click", function (e) {
@@ -813,7 +814,6 @@ function productDelivery_close() {
   let productDelivery = document.querySelector(".product-item__delivery");
   productDelivery.classList.remove("_active");
 }
-
 let productWarranty = document.querySelector(".product-item__warranty");
 if (productWarranty != null) {
   productWarranty.addEventListener("click", function (e) {
@@ -856,6 +856,7 @@ for (let i = 0; i < productDefaultItem.length; i++) {
     this.classList.add("_checked");
   });
 }
+
 
 // $(document).ready(function(){
 //   $(".product-item__img-big").zoom({
