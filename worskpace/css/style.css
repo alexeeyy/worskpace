@@ -187,10 +187,10 @@ body._lock {
 }
 
 .select__options {
+  text-align: center;
   color: #000;
   position: absolute;
-  top: 32px;
-  border-radius: 0 0 4px 4px;
+  top: 35px;
   min-width: 100%;
   left: 0;
   background-color: #fff;
@@ -1167,6 +1167,25 @@ footer {
   margin: 0px auto 20px;
 }
 
+.item-goods__img-wrapper svg {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  fill: #e3e1f3;
+  -webkit-transition: opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s, fill 0.3s ease-in-out 0s;
+  -o-transition: opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s, fill 0.3s ease-in-out 0s;
+  transition: opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s, fill 0.3s ease-in-out 0s;
+}
+
+.item-goods__img-wrapper svg:hover {
+  fill: #FF6F61;
+}
+
 .item-goods__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1226,7 +1245,7 @@ footer {
 }
 
 .item-goods__feedbacks {
-  color: #333333;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -1293,11 +1312,6 @@ footer {
   transition: all 0.3s ease 0s;
 }
 
-.item-goods__select-wrapper {
-  display: block;
-  margin: 0px 0px 15px 0px;
-}
-
 .item-goods__variants {
   margin: 0px 0px 15px 0px;
 }
@@ -1320,30 +1334,26 @@ footer {
   -webkit-transition: border 0.3s, color 0.3s;
   -o-transition: border 0.3s, color 0.3s;
   transition: border 0.3s, color 0.3s;
-  -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
-  transition: -webkit-box-shadow 0.3s ease 0s;
-  -o-transition: box-shadow 0.3s ease 0s;
-  transition: box-shadow 0.3s ease 0s;
-  transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-.item-goods__variant:hover,
-.item-goods__variant:focus {
-  -webkit-box-shadow: #FF6F61 0px 0px 3px inset;
-          box-shadow: #FF6F61 0px 0px 3px inset;
+.item-goods__variant._checked {
+  background-color: #FF6F61;
+  color: #fff;
 }
 
 .item-goods__variant_popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 35px;
+  padding: 0 25px 0 5px;
   border: 1px solid #ccc;
   color: #000;
   background: url(../img/icons/select.svg) no-repeat 95% center/11px;
@@ -1351,6 +1361,11 @@ footer {
 
 .item-goods__variant_popup img {
   margin: 0px 5px 0px 0px;
+}
+
+.item-goods__variant_popup span {
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .item-goods__buttons {
@@ -1371,17 +1386,24 @@ footer {
   border: 1px solid #FF6F61;
   background-color: #FF6F61;
   color: #fff;
-  -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
-  transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s, background-color 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
 .item-goods__buttons_formal:hover,
-.popup-variants__buttons_formal:hover,
-.item-goods__buttons_formal:focus,
-.popup-variants__buttons_formal:focus {
+.popup-variants__buttons_formal:hover {
   background-color: #fff;
   color: #FF6F61;
+}
+
+.item-goods__buttons_formal:active,
+.popup-variants__buttons_formal:active {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .item-goods__buttons_buy,
@@ -1393,17 +1415,362 @@ footer {
   border: 1px solid #FF6F61;
   background-color: #FF6F61;
   color: #fff;
-  -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
-  transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s, background-color 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
 .item-goods__buttons_buy:hover,
-.popup-variants__buttons_buy:hover,
-.item-goods__buttons_buy:focus,
-.popup-variants__buttons_buy:focus {
+.popup-variants__buttons_buy:hover {
   background-color: #fff;
   color: #FF6F61;
+}
+
+.item-goods__buttons_buy:active,
+.popup-variants__buttons_buy:active {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.product {
+  padding: 50px 0;
+}
+
+.product__content {
+  max-width: 1360px;
+}
+
+.product-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product-item__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 27%;
+          flex: 0 0 27%;
+  margin: 30px 0px 0px 0px;
+}
+
+.product-item__brand-links {
+  margin: 0px 0px 2px 0px;
+}
+
+.product-item__brand-link_brand {
+  color: #000;
+}
+
+.product-item__brand-link_series {
+  color: #999999;
+}
+
+.product-item__title {
+  margin: 0px 0px 2px 0px;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.product-item__category {
+  margin: 0px 0px 18px 0px;
+  font-size: 15px;
+  line-height: 25.5px;
+  color: #999999;
+}
+
+.product-item__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 0px 30px 0px;
+}
+
+.product-item__label {
+  border-width: 1em 0.5em 0.4em;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.product-item__label._sale {
+  border-color: #ff6f61 #ff6f61 transparent;
+}
+
+.product-item__label._hit {
+  border-color: #792c9b #792c9b transparent;
+}
+
+.product-item__label._new {
+  border-color: #1bbc9b #1bbc9b transparent;
+}
+
+.product-item__star-list {
+  color: #FF6F61;
+}
+
+.product-item__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FF6F61;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 15px;
+}
+
+.product-item__text-info {
+  margin: 0px 0px 15px 0px;
+  line-height: 22.5px;
+  color: #000;
+}
+
+.product-item__text-info strong {
+  font-weight: 600;
+}
+
+.product-item__to-description-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 15px;
+  border-bottom: 1px solid #d8d8d8;
+  color: #000;
+}
+
+.product-item__to-description-link:active {
+  color: #FF6F61;
+}
+
+.product-item__gallery {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 34%;
+          flex: 0 0 34%;
+  margin: 0 40px;
+  overflow: hidden;
+}
+
+.product-item__gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-item__gallery .product-item__for {
+  margin: 0px 0px 40px 0px;
+}
+
+.product-item__gallery .product-item__for li {
+  height: 380px;
+}
+
+.product-item__gallery .product-item__for li a {
+  cursor: url(https://makeup.com.ua/theme/site/img/zoom-in.cur), -webkit-zoom-in;
+  cursor: url(https://makeup.com.ua/theme/site/img/zoom-in.cur), zoom-in;
+}
+
+.product-item__gallery .product-item__nav li {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.product-item__buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  margin: 30px 0px 0px 0px;
+}
+
+.product-item__price-old {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.product-item__price-current {
+  margin: 0px 0px 10px 0px;
+  font-size: 24px;
+  line-height: 41px;
+}
+
+.product-item__select-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 160px;
+  margin: 0px 0px 15px 0px;
+}
+
+.product-item__product-code {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.product-item__status {
+  margin: 0px 0px 20px 0px;
+  line-height: 22px;
+}
+
+.product-item__instock {
+  color: #1bbc9b;
+}
+
+.product-item__notavailible {
+  color: #792C9B;
+}
+
+.product-item__buy-btn {
+  max-width: 160px;
+  height: 35px;
+  margin: 0px 0px 20px 0px;
+  border: 1px solid #FF6F61;
+  background-color: #FF6F61;
+  color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.product-item__buy-btn:hover {
+  background-color: #fff;
+  color: #FF6F61;
+}
+
+.product-item__needed-color-link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px 0px 20px 0px;
+  border-bottom: 1px solid #d8d8d8;
+  color: #000;
+}
+
+.product-item__needed-color-link:active {
+  color: #FF6F61;
+}
+
+.product-item__delivery {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px 0px 10px 0px;
+  color: #FF6F61;
+  cursor: pointer;
+}
+
+.product-item__delivery._active .productDelivery {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-item__delivery img {
+  margin: 0px 10px 0px 0px;
+  width: 25px;
+}
+
+.product-item__delivery figcaption {
+  border-bottom: 1px solid #e2d7e8;
+}
+
+.product-item__hidden {
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 370px;
+  margin: 10px 0px 0px 0px;
+  padding: 22px 28px;
+  color: #333;
+  top: 100%;
+  left: -78px;
+  border: 2px solid #FF6F61;
+  font-size: 14.5px;
+  line-height: 1.9;
+  background-color: #fff;
+  white-space: normal;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  -o-transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.product-item__hidden::before {
+  border-left: 2px solid #FF6F61;
+  border-top: 2px solid #FF6F61;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  content: "";
+  position: absolute;
+  left: 85px;
+  top: -5px;
+  width: 6px;
+  height: 6px;
+}
+
+.product-item__warranty {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #FF6F61;
+  cursor: pointer;
+}
+
+.product-item__warranty._active .productWarranty {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-item__warranty img {
+  margin: 0px 10px 0px 0px;
+  width: 23px;
+}
+
+.product-item__warranty figcaption {
+  border-bottom: 1px solid #e2d7e8;
 }
 
 @media (min-width: 991.98px) {
@@ -1478,5 +1845,10 @@ footer {
     -webkit-transform: translateY(5%);
         -ms-transform: translateY(5%);
             transform: translateY(5%);
+  }
+
+  .item-goods:hover svg {
+    opacity: 1;
+    visibility: visible;
   }
 }

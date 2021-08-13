@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Продукт"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page">
+        <div class="product">
+          <div class="product__content _container">
+            <div class="product-item">
+              <div class="product-item__description">
+                <span class="product-item__brand-links">
+                  <a href="#" class="product-item__brand-link product-item__brand-link_brand">Maybelline New York</a>
+                  <a href="#" class="product-item__brand-link product-item__brand-link_series"> / Глаза</a>
+                </span>
+                <span class="product-item__title">Maybelline New York Cils Sensational</span>
+                <span class="product-item__category">Тушь для ресниц</span>
+                <div class="product-item__social">
+                  <span class="product-item__label _sale">
+                    
+                  </span>
+                  <span class="product-item__star-list">★★★★★</span>
+                  <a href="#" class="product-item__rating"><span>4261</span>&nbsp;<p>отзыв</p></a>
+                </div>
+                <div class="product-item__text-info">
+                  <p><strong>Возраст: </strong>18+</p>
+                  <p><strong>Классификация: </strong>масс маркет</p>
+                  <p><strong>Объем: </strong>9.5ml</p>
+                  <p><strong>Сделано в: </strong>Италия</p>
+                  <p><strong>Страна ТМ: </strong>США</p>
+                </div>
+                <a href="#" class="product-item__to-description-link">Описание</a>
+              </div>
+              <div class="product-item__gallery">
+                <ul class="product-item__for">
+                  <li class="product-item__img-big"><a href="#"><img src="https://via.placeholder.com/415x380" alt=""></a></li>
+                  <li class="product-item__img-big"><a href="#"><img src="https://via.placeholder.com/415x380" alt=""></a></li>
+                  <li class="product-item__img-big"><a href="#"><img src="https://via.placeholder.com/415x380" alt=""></a></li>
+                  <li class="product-item__img-big"><a href="#"><img src="https://via.placeholder.com/415x380" alt=""></a></li>
+                  <li class="product-item__img-big"><a href="#"><img src="https://via.placeholder.com/415x380" alt=""></a></li>
+                  </ul>
+                <ul class="product-item__nav">
+                  <li><img src="https://via.placeholder.com/60x60" alt=""></li>
+                  <li><img src="https://via.placeholder.com/60x60" alt=""></li>
+                  <li><img src="https://via.placeholder.com/60x60" alt=""></li>
+                  <li><img src="https://via.placeholder.com/60x60" alt=""></li>
+                  <li><img src="https://via.placeholder.com/60x60" alt=""></li>
+                </ul>
+              </div>
+              <div class="product-item__buy">
+                <span class="product-item__price-old">238 ₴</span>
+                <span class="product-item__price-current">155 ₴</span>
+                <div class="product-item__select-wrapper">
+                  <!-- DEFAULT -->
+                  <span href="product.html" class="item-goods__variant" title="4ml">4ml</span>
+                  <span href="product.html" class="item-goods__variant" title="100ml">100ml</span>
+
+                  <!-- SELECT -->
+                  <!-- <select name="form[]" class="item-goods__variant_select">
+                    <option value="1" class="selected">4ml</option>
+                    <option value="2">7ml</option>
+                    <option value="3">12ml</option>
+                    <option value="4">16ml</option>
+                  </select> -->
+
+                  <!-- POPUP -->
+                  <!-- <a href="#variants" class="item-goods__variant_popup popup-variants _popup-link"><img src="https://via.placeholder.com/25" alt=""><span>01 - Black черный</span></a> -->
+                </div>
+                <span class="product-item__product-code">код товара: <span>159015</span></span>
+                <span class="product-item__status">
+                  <span class="product-item__instock">Есть в наличии</span>
+                  <!-- <span class="product-item__notavailible">Доставки из ЕС!</span> -->
+                </span>
+                <button type="submit" class="product-item__buy-btn">Купить</button>
+                <a href="#" class="product-item__needed-color-link">Нет нужного цвета?</a>
+                <figure class="product-item__delivery">
+                  <img src="img/delivery.svg" alt="">
+                  <figcaption>Бесплатная доставка!</figcaption>
+                  <span class="product-item__hidden productDelivery">
+                    Доставка нашей службой — 0 грн. Минимальный заказ - от 99 грн.<br>
+                    Курьером других перевозчиков в регионы и до склада — 0 грн. при заказе от 599 грн.<br>
+                    При выборе товара с флажком ЕС — бесплатно со склада в ЕС при сумме заказа от 750 грн. На товары, доставляемые со склада в ЕС, не действуют промо-коды, сертификаты и акции<br>
+                    Доставка по Киеву - 1 день, в регионы – 1-3 дня, доставка из ЕС в Украину занимает в среднем 3-5 дней.
+                  </span>
+                </figure>
+                <figure class="product-item__warranty">
+                  <img src="img/warranty.svg" alt="">
+                  <figcaption>Гарантия</figcaption>
+                  <span class="product-item__hidden productWarranty">
+                    Только 100% оригинальная продукция.<br>Возможность проверить заказ при получении<br>Обмен/Возврат, если упаковка не вскрыта<br>Для товаров из ЕС - только полный возврат посылки.
+                  </span>
+                </figure>
+              </div>
+            </div>
+        </div>
+        </div>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		@@include('_popup.html',{})
+		@@include('_js.html',{})
+	</body>
+</html>
