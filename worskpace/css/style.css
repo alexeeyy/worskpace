@@ -1790,6 +1790,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .product-item-row {
@@ -2018,6 +2021,28 @@ footer {
     margin: 0 auto 20px;
   }
 
+  .product-item__hidden {
+    width: 75vw;
+  }
+
+  .product-item__hidden.productDelivery {
+    left: 0px;
+  }
+
+  .product-item__hidden.productDelivery::before {
+    left: 100px;
+  }
+
+  .product-item__hidden.productWarranty {
+    left: auto;
+    right: 0;
+  }
+
+  .product-item__hidden.productWarranty:before {
+    left: auto;
+    right: 25px;
+  }
+
   .info-figures-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2036,6 +2061,7 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0px 0px 10px 0px;
   }
 
   .product-inner-price-wrapper {
@@ -2109,6 +2135,7 @@ footer {
   }
 
   .product-item__price-current {
+    margin: 0;
     font-size: 35px;
     line-height: 50px;
   }
@@ -2237,6 +2264,14 @@ footer {
   .product-item__needed-color-link {
     margin: 0 auto 10px;
     font-size: 14px;
+  }
+
+  .product-item__hidden {
+    width: calc(100vw - 20px);
+  }
+
+  .product-item__hidden.productDelivery {
+    left: 0;
   }
 
   .info-figures-wrapper {

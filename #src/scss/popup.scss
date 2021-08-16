@@ -10,7 +10,7 @@
 	height: 100%;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
-  @media (max-width: $md3+px) {
+  @media (max-width: 767.98+px) {
     padding: 50px 0px 30px;
   }
 	&::before {
@@ -65,7 +65,7 @@
 		padding: 50px;
 		width: 100%;
 		max-width: 800px;
-    @media (max-width: $md3+px) {
+    @media (max-width: 767.98+px) {
       padding: 30px 10px 15px;
     }
 	}
@@ -88,7 +88,7 @@
       display: flex;
       justify-content: space-between;
       gap: 5%;
-      @media (max-width: $md2+px) {
+      @media (max-width: 991.98+px) {
         flex-direction: column;
       }
 		}
@@ -102,7 +102,7 @@
 			&_r {
         flex: 0 0 25%;
         text-align: right;
-        @media (max-width: $md2+px) {
+        @media (max-width: 991.98+px) {
           text-align: left;
         }
 			}
@@ -116,7 +116,7 @@
       line-height: 1.5;
       color: #333;
       word-break: break-word;
-      @media (max-width: $md2+px) {
+      @media (max-width: 991.98+px) {
         font-size: 14px;
       }
 		}
@@ -127,14 +127,14 @@
       color: #999;
       line-height: 1.3;
       word-break: break-word;
-      @media (max-width: $md2+px) {
+      @media (max-width: 991.98+px) {
         margin: 0px 0px 10px 0px;
       }
 		}
 		// .popup-variants__item-code
 		&__item-code {
       color: #999;
-      @media (max-width: $md2+px) {
+      @media (max-width: 991.98+px) {
         display: inline-flex;
         margin: 0px 0px 10px 0px;
         font-size: 14px;
@@ -144,7 +144,7 @@
 		&__body {
       display: flex;
       justify-content: space-between;
-      @media (max-width: $md2+px) {
+      @media (max-width: 991.98+px) {
         flex-direction: column;
       }
 		}
@@ -154,7 +154,7 @@
 			&_l {
         flex: 0 0 40%;
         padding-top: 43%;
-        @media (max-width: $md2+px) {
+        @media (max-width: 991.98+px) {
           margin: 0px 0px 20px 0px;
         }
 			}
@@ -180,10 +180,10 @@
       border: 1px solid #c8c8c8;
       transition: .4s ease-out;
       font-size: 14px;
-      @media (max-width: $md2+px) {
+      @media (max-width: 991.98+px) {
         margin: 0px 0px 20px 0px;
       }
-      @media (max-width: $md4+px) {
+      @media (max-width: 479.98+px) {
         margin: 0px 0px 15px 0px;
       }
 		}
@@ -214,11 +214,11 @@
 		// .popup-variants__price
 		&__price {
       flex: 0 0 30%;
-      @media (max-width: $md2+px) {
+      @media (max-width: 991.98+px) {
         display: flex;
         flex-direction: column;
       }
-      @media (max-width: $md4+px) {
+      @media (max-width: 479.98+px) {
         flex: 0 0 auto;
         margin-right: auto;
       }
@@ -232,7 +232,7 @@
       line-height: 17px;
       color: #999;
       text-decoration: line-through;
-      @media (max-width: $md4+px) {
+      @media (max-width: 479.98+px) {
         font-size: 14px;
       }
 			// .popup-variants__price-old_number
@@ -247,7 +247,7 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 22px;
-      @media (max-width: $md4+px) {
+      @media (max-width: 479.98+px) {
         font-size: 16px;
       }
 			// .popup-variants__price-current_number
@@ -263,7 +263,7 @@
       justify-content: space-between;
       flex: 0 0 65%;
       gap: 5%;
-      @media (max-width: $md4+px) {
+      @media (max-width: 479.98+px) {
         flex: 0 0 80%;
       }
 			// .popup-variants__buttons_formal

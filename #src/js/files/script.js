@@ -13,10 +13,7 @@ if (productDelivery != null) {
       productDelivery.classList.toggle("_active");
   });
 }
-function productDelivery_close() {
-  let productDelivery = document.querySelector(".product-item__delivery");
-  productDelivery.classList.remove("_active");
-}
+
 let productWarranty = document.querySelector(".product-item__warranty");
 if (productWarranty != null) {
   productWarranty.addEventListener("click", function (e) {
@@ -29,26 +26,6 @@ function productDelivery_close() {
 }
 
 
-$(".product-item__for").slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  // fade: true,
-  asNavFor: ".product-item__nav",
-  dots: true,
-});
-$(".product-item__nav").slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  asNavFor: ".product-item__for",
-  // dots: true,
-  centerMode: false,
-  focusOnSelect: true,
-  lazyLoad: 'progressive',
-  arrows: true,
-});
-
-
 $(document).ready(function () {
   $(".item-variant").click(function (e) {
     e.preventDefault();
@@ -58,8 +35,31 @@ $(document).ready(function () {
 });
 
 
-// $(document).ready(function(){
-//   $(".product-item__img-big").zoom({
-//     url: "https://via.placeholder.com/1920x1080",
-//   });
-// });
+$(document).ready(function(){
+  $(".product-item__img-big").zoom({
+    url: "https://via.placeholder.com/1920x1080",
+    touch: false,
+    on: "mouseover",
+  });
+});
+
+$(document).ready(function(){
+  $(".product-item__for").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    // fade: true,
+    asNavFor: ".product-item__nav",
+    dots: true,
+  });
+  $(".product-item__nav").slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: ".product-item__for",
+    // dots: true,
+    centerMode: false,
+    focusOnSelect: true,
+    lazyLoad: "progressive",
+    arrows: true,
+  });
+});
