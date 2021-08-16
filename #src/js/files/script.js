@@ -1,15 +1,10 @@
-let popupVariantsList = document.querySelector(".popup-variants__list");
-let popupVariantsItem = popupVariantsList.getElementsByClassName(
-  "popup-variants__item"
-);
-for (let i = 0; i < popupVariantsItem.length; i++) {
-  popupVariantsItem[i].addEventListener("click", function () {
-    document.querySelector("._checked")
-      ? document.querySelector("._checked").classList.remove("_checked")
-      : "";
-    this.classList.add("_checked");
+$(document).ready(function () {
+  $(".popup-variants__item").click(function (e) {
+    e.preventDefault();
+    $(".popup-variants__item").removeClass("_checked");
+    $(this).addClass("_checked");
   });
-}
+});
 
 
 let productDelivery = document.querySelector(".product-item__delivery");
@@ -40,6 +35,7 @@ $(".product-item__for").slick({
   arrows: false,
   // fade: true,
   asNavFor: ".product-item__nav",
+  dots: true,
 });
 $(".product-item__nav").slick({
   slidesToShow: 5,
@@ -49,21 +45,17 @@ $(".product-item__nav").slick({
   centerMode: false,
   focusOnSelect: true,
   lazyLoad: 'progressive',
+  arrows: true,
 });
 
 
-let productDefaultList = document.querySelector(".product-item__select-wrapper");
-let productDefaultItem = productDefaultList.getElementsByClassName(
-  "item-goods__variant"
-);
-for (let i = 0; i < productDefaultItem.length; i++) {
-  productDefaultItem[i].addEventListener("click", function () {
-    document.querySelector("._checked")
-      ? document.querySelector("._checked").classList.remove("_checked")
-      : "";
-    this.classList.add("_checked");
+$(document).ready(function () {
+  $(".item-variant").click(function (e) {
+    e.preventDefault();
+    $(".item-variant").removeClass("_checked");
+    $(this).addClass("_checked");
   });
-}
+});
 
 
 // $(document).ready(function(){
