@@ -865,11 +865,11 @@ body.ie ._ibg img {
 }
 
 .popup__close {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 7.5px;
+  right: 7.5px;
   cursor: pointer;
   z-index: 30;
   background: url("../img/icons/close.svg") 0 0 no-repeat;
@@ -980,10 +980,6 @@ body.ie ._ibg img {
   -webkit-transition: background-color 0.1s ease 0s;
   -o-transition: background-color 0.1s ease 0s;
   transition: background-color 0.1s ease 0s;
-}
-
-.popup-variants__item:hover {
-  color: #FF6F61;
 }
 
 .popup-variants__item img {
@@ -1881,6 +1877,12 @@ footer {
     font-size: 14px;
   }
 
+  .popup__close {
+    width: 30px;
+    height: 30px;
+    right: 12.5px;
+  }
+
   .popup-variants__header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2082,7 +2084,7 @@ footer {
   }
 
   .popup__body {
-    padding: 30px 10px 15px;
+    padding: 35px 10px 15px;
   }
 
   .item-goods {
@@ -2286,6 +2288,10 @@ footer {
 }
 
 @media (any-hover: hover) {
+  .popup-variants__item:hover {
+    color: #FF6F61;
+  }
+
   .item-goods:hover::before {
     opacity: 1;
     visibility: visible;

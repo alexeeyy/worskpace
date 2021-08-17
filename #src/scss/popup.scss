@@ -66,19 +66,24 @@
 		width: 100%;
 		max-width: 800px;
     @media (max-width: 767.98+px) {
-      padding: 30px 10px 15px;
+      padding: 35px 10px 15px;
     }
 	}
 	// .popup__close
 	&__close {
-		width: 20px;
-		height: 20px;
+		width: 25px;
+		height: 25px;
 		position: absolute;
-		top: 5px;
-		right: 5px;
+		top: 7.5px;
+		right: 7.5px;
 		cursor: pointer;
 		z-index: 30;
 		background: url("../img/icons/close.svg") 0 0 no-repeat;
+    @media (max-width: $md2+px) {
+      width: 30px;
+      height: 30px;
+      right: 12.5px;
+    }
 	}
 }
 //====================================================================================================
@@ -195,9 +200,12 @@
       cursor: pointer;
       transition: color 0.3s ease 0s;
       transition: background-color 0.1s ease 0s;
-      &:hover {
-        color: #FF6F61;
+      @media (any-hover: hover) {
+        &:hover {
+          color: #FF6F61;
+        }
       }
+      
       & img {
         margin: 0px 10px 0px 10px;
       }
